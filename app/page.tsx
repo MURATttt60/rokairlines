@@ -4,29 +4,34 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
 
-      {/* HERO */}
+      {/* Hero Section */}
       <section
         className="relative h-[600px] bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8)), url('/rok-bg.jpg')",
+            "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.85)), url('/rok-bg.jpg')",
         }}
       >
-        <div className="flex h-full flex-col items-center justify-center text-center px-5">
+        <div className="flex h-full flex-col items-center justify-center text-center px-6">
 
-          <h1 className="text-6xl font-extrabold tracking-wide">
+          <h1 className="text-6xl font-extrabold tracking-widest">
             ROK AIRLINES
           </h1>
 
-          <p className="mt-5 text-xl text-gray-300">
-            Rise of Kingdoms Commander & Kingdom Database
+          <p className="mt-6 text-xl text-gray-300">
+            Rise of Kingdoms Database & Statistics Platform
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <p className="mt-2 text-gray-400">
+            Governors • Kingdoms • Commanders • KvK Records
+          </p>
+
+
+          <div className="mt-8 flex gap-5">
 
             <Link
               href="/governors"
-              className="rounded-lg bg-yellow-600 px-6 py-3 font-bold hover:bg-yellow-500"
+              className="rounded-lg bg-yellow-600 px-7 py-3 font-bold transition hover:bg-yellow-500"
             >
               Governors
             </Link>
@@ -34,10 +39,11 @@ export default function Home() {
 
             <Link
               href="/kingdoms"
-              className="rounded-lg border border-yellow-500 px-6 py-3 font-bold hover:bg-yellow-500 hover:text-black"
+              className="rounded-lg border border-yellow-500 px-7 py-3 font-bold transition hover:bg-yellow-500 hover:text-black"
             >
               Kingdoms
             </Link>
+
 
           </div>
 
@@ -45,50 +51,77 @@ export default function Home() {
       </section>
 
 
-      {/* CARDS */}
 
-      <section className="grid md:grid-cols-3 gap-6 p-10">
+      {/* Feature Cards */}
+      <section className="grid gap-6 p-10 md:grid-cols-3">
 
-        <div className="rounded-xl bg-zinc-900 p-6 text-center border border-zinc-700">
-          <h2 className="text-2xl font-bold">
-            👑 Governors
+
+        <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-6 text-center">
+
+          <div className="text-4xl">
+            👑
+          </div>
+
+          <h2 className="mt-4 text-2xl font-bold">
+            Governors
           </h2>
 
           <p className="mt-3 text-gray-400">
-            Player statistics, KP, Power and rankings.
-          </p>
-        </div>
-
-
-
-        <div className="rounded-xl bg-zinc-900 p-6 text-center border border-zinc-700">
-
-          <h2 className="text-2xl font-bold">
-            🏰 Kingdoms
-          </h2>
-
-          <p className="mt-3 text-gray-400">
-            Kingdom history, KvK records and information.
+            Track player statistics, power, kill points and achievements.
           </p>
 
         </div>
 
 
 
-        <div className="rounded-xl bg-zinc-900 p-6 text-center border border-zinc-700">
+        <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-6 text-center">
 
-          <h2 className="text-2xl font-bold">
-            ⚔️ Commanders
+          <div className="text-4xl">
+            🏰
+          </div>
+
+          <h2 className="mt-4 text-2xl font-bold">
+            Kingdoms
           </h2>
 
           <p className="mt-3 text-gray-400">
-            Commander builds and equipment guides.
+            Explore kingdoms, KvK history, rankings and battle records.
+          </p>
+
+        </div>
+
+
+
+
+        <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-6 text-center">
+
+          <div className="text-4xl">
+            ⚔️
+          </div>
+
+          <h2 className="mt-4 text-2xl font-bold">
+            Commanders
+          </h2>
+
+          <p className="mt-3 text-gray-400">
+            Discover commander builds, talents and equipment guides.
           </p>
 
         </div>
 
 
       </section>
+
+
+
+      {/* Footer */}
+      <footer className="border-t border-zinc-800 py-6 text-center text-gray-500">
+
+        ROK Airlines © 2026  
+        <br />
+        Rise of Kingdoms Community Database
+
+      </footer>
 
 
     </main>
